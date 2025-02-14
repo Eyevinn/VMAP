@@ -3,25 +3,23 @@ package vmap
 import "encoding/xml"
 
 type VMAP struct {
-	XMLName xml.Name  `xml:"VMAP"`
-	Text    string    `xml:",chardata"`
-	Vmap    string    `xml:"vmap,attr"`
-	Version string    `xml:"version,attr"`
-	AdBreak []AdBreak `xml:"AdBreak"`
+	XMLName  xml.Name  `xml:"VMAP"`
+	Text     string    `xml:",chardata"`
+	Vmap     string    `xml:"vmap,attr"`
+	Version  string    `xml:"version,attr"`
+	AdBreaks []AdBreak `xml:"AdBreak"`
 }
 
 type AdBreak struct {
-	AdSource       *AdSource       `xml:"AdSource"`
-	TrackingEvents *TrackingEvents `xml:"TrackingEvents"`
+	AdSource       *AdSource   `xml:"AdSource"`
+	TrackingEvents *[]Tracking `xml:"TrackingEvents"`
+	Id             string      `xml:"breakId,attr"`
+	BreakType      string      `xml:"breakType,attr"`
+	TimeOffset     string      `xml:"timeOffset,attr"`
 }
 
 type AdSource struct {
 	VASTData *VASTData `xml:"VASTAdData"`
-}
-
-type TrackingEvents struct {
-	Text     string     `xml:",chardata"`
-	Tracking []Tracking `xml:"Tracking"`
 }
 
 type Tracking struct {
@@ -70,8 +68,8 @@ type Creative struct {
 type UniversalAdId struct{}
 
 type Linear struct {
-	Duration       string           `xml:"Duration"` // TODO: Make into duration object
-	TrackingEvents []TrackingEvents `xml:"TrackingEvents"`
+	Duration       string     `xml:"Duration"` // TODO: Make into duration object
+	TrackingEvents []Tracking `xml:"TrackingEvents"`
 }
 
 type VideoClicks struct {

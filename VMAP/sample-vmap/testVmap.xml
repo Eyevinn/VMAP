@@ -8,7 +8,7 @@
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #1&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_001"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_001" adId="">
@@ -17,19 +17,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:05&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -40,11 +40,11 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag.mp4
+https://test-adserver.domain/promotions/trailers/TEST_TRAILER.mp4
                       ]]></MediaFile>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag.mp4
+https://test-adserver.domain/promotions/trailers/TEST_TRAILER.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -58,7 +58,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #2&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_002"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_002" adId="">
@@ -67,19 +67,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:09&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -90,7 +90,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65c629f095a0ad04588ec2de_PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars.mp4
+https://test-adserver.domain/promotions/trailers/65c629f095a0ad04588ec2de_PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -104,7 +104,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65c629f095a0ad04588ec2de_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #3&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_003"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_003" adId="">
@@ -113,19 +113,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:09&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -136,7 +136,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65f050b9db5f31002ade6dcc_PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG.mp4
+https://test-adserver.domain/promotions/trailers/65f050b9db5f31002ade6dcc_PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -150,7 +150,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65f050b9db5f31002ade6dcc_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #4&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_004"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_004" adId="">
@@ -159,19 +159,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:09&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -182,7 +182,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65c629d53326b06d0efaa405_PLAY_MINITRAILER_OXEN_S01_9s_STREAMA.mp4
+https://test-adserver.domain/promotions/trailers/TEST_ASSET.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -196,7 +196,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65c629d53326b06d0efaa405_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #5&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_005"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_005" adId="">
@@ -205,19 +205,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:15&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -228,7 +228,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65e08abd478b85002d9d4d2b_PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901.mp4
+https://test-adserver.domain/promotions/trailers/65e08abd478b85002d9d4d2b_TEST_ASSET.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -242,7 +242,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65e08abd478b85002d9d4d2b_PLAY_L
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #6&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_006"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_006" adId="">
@@ -251,19 +251,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:05&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -274,7 +274,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag.mp4
+https://test-adserver.domain/promotions/trailers/TEST_TRAILER.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -288,7 +288,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #7&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_007"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_007" adId="">
@@ -297,19 +297,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:05&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -320,7 +320,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag.mp4
+https://test-adserver.domain/promotions/trailers/TEST_TRAILER.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -334,7 +334,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_M
     </vmap:AdSource>
     <vmap:TrackingEvents>
       <vmap:Tracking event="breakStart"><![CDATA[
- http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=midroll.ad-1&progress=vmap 
+ http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=midroll.ad-1&progress=vmap 
       ]]></vmap:Tracking>
     </vmap:TrackingEvents>
   </vmap:AdBreak>
@@ -347,7 +347,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #1&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_001"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_001" adId="">
@@ -356,19 +356,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:05&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -379,7 +379,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag.mp4
+https://test-adserver.domain/promotions/trailers/TEST_TRAILER.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -393,7 +393,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #2&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_002"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_002" adId="">
@@ -402,19 +402,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:09&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -425,7 +425,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65c629f095a0ad04588ec2de_PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars.mp4
+https://test-adserver.domain/promotions/trailers/65c629f095a0ad04588ec2de_PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -439,7 +439,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65c629f095a0ad04588ec2de_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #3&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_003"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_003" adId="">
@@ -448,19 +448,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:09&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -471,7 +471,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65f050b9db5f31002ade6dcc_PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG.mp4
+https://test-adserver.domain/promotions/trailers/65f050b9db5f31002ade6dcc_PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -485,7 +485,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65f050b9db5f31002ade6dcc_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #4&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_004"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_004" adId="">
@@ -494,19 +494,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:09&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -517,7 +517,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65c629d53326b06d0efaa405_PLAY_MINITRAILER_OXEN_S01_9s_STREAMA.mp4
+https://test-adserver.domain/promotions/trailers/TEST_ASSET.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -531,7 +531,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65c629d53326b06d0efaa405_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #5&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_005"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_005" adId="">
@@ -540,19 +540,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:15&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -563,7 +563,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65e08abd478b85002d9d4d2b_PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901.mp4
+https://test-adserver.domain/promotions/trailers/65e08abd478b85002d9d4d2b_TEST_ASSET.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -577,7 +577,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65e08abd478b85002d9d4d2b_PLAY_L
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #6&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_006"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_006" adId="">
@@ -586,19 +586,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:05&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -609,7 +609,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag.mp4
+https://test-adserver.domain/promotions/trailers/TEST_TRAILER.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -623,7 +623,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #7&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_007"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_007" adId="">
@@ -632,19 +632,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:05&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -655,7 +655,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag.mp4
+https://test-adserver.domain/promotions/trailers/TEST_TRAILER.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -669,7 +669,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_M
     </vmap:AdSource>
     <vmap:TrackingEvents>
       <vmap:Tracking event="breakStart"><![CDATA[
- http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=midroll.ad-2&progress=vmap 
+ http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=midroll.ad-2&progress=vmap 
       ]]></vmap:Tracking>
     </vmap:TrackingEvents>
   </vmap:AdBreak>
@@ -682,7 +682,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #1&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_001"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_001" adId="">
@@ -691,19 +691,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:05&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_1&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD_ASSET&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -714,7 +714,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag.mp4
+https://test-adserver.domain/promotions/trailers/TEST_TRAILER.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -728,7 +728,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #2&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_002"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_002" adId="">
@@ -737,19 +737,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:09&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars_2&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -760,7 +760,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65c629f095a0ad04588ec2de_PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars.mp4
+https://test-adserver.domain/promotions/trailers/65c629f095a0ad04588ec2de_PLAY_MINITRAILER_F_NGARNA_P__FORTET_240316_S25_ns_16_mars.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -774,7 +774,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65c629f095a0ad04588ec2de_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #3&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_003"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_003" adId="">
@@ -783,19 +783,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:09&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG_3&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=ANOTHER_TEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -806,7 +806,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65f050b9db5f31002ade6dcc_PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG.mp4
+https://test-adserver.domain/promotions/trailers/65f050b9db5f31002ade6dcc_PLAY_MINITRAILER_MASKED_SINGER_S04_240322_NY_S_SONG.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -820,7 +820,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65f050b9db5f31002ade6dcc_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #4&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_004"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_004" adId="">
@@ -829,19 +829,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:09&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_OXEN_S01_9s_STREAMA_4&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -852,7 +852,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65c629d53326b06d0efaa405_PLAY_MINITRAILER_OXEN_S01_9s_STREAMA.mp4
+https://test-adserver.domain/promotions/trailers/TEST_ASSET.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -866,7 +866,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65c629d53326b06d0efaa405_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #5&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_005"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_005" adId="">
@@ -875,19 +875,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:15&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901_5&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_ASSET&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -898,7 +898,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65e08abd478b85002d9d4d2b_PLAY_LINEUP_MARS_2024_15s_XP_TV4___TRL1020203673901.mp4
+https://test-adserver.domain/promotions/trailers/65e08abd478b85002d9d4d2b_TEST_ASSET.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -912,7 +912,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65e08abd478b85002d9d4d2b_PLAY_L
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #6&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_006"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_006" adId="">
@@ -921,19 +921,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:05&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_6&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PTEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -944,7 +944,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag.mp4
+https://test-adserver.domain/promotions/trailers/TEST_TRAILER.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -958,7 +958,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_M
               <AdSystem>&#xA;Test Adserver&#xA; </AdSystem>
               <AdTitle>&#xA;Ad That Test-Adserver Wants Player To See #7&#xA; </AdTitle>
               <Impression id="IMPRESSION-ID_007"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=vast
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=vast
               ]]></Impression>
               <Creatives>
                 <Creative id="CRETIVE-ID_007" adId="">
@@ -967,19 +967,19 @@ http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea
                     <Duration>&#xA;00:00:05&#xA; </Duration>
                     <TrackingEvents>
                       <Tracking event="start"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=0
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=0
                       ]]></Tracking>
                       <Tracking event="firstQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=25
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=25
                       ]]></Tracking>
                       <Tracking event="midpoint"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=50
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=50
                       ]]></Tracking>
                       <Tracking event="thirdQuartile"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=75
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=75
                       ]]></Tracking>
                       <Tracking event="complete"><![CDATA[
-http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag_7&progress=100
+http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=TEST_AD&progress=100
                       ]]></Tracking>
                     </TrackingEvents>
                     <VideoClicks>
@@ -990,7 +990,7 @@ https://github.com/Eyevinn/test-adserver
                     <MediaFiles>
                       <MediaFile bitrate="10041" delivery="progressive" height="1080"
                         type="video/mp4" width="1920"><![CDATA[
-https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_MINITRAILER_BACHELORETTE_5_SEK_annandag.mp4
+https://test-adserver.domain/promotions/trailers/TEST_TRAILER.mp4
                       ]]></MediaFile>
                     </MediaFiles>
                   </Linear>
@@ -1004,7 +1004,7 @@ https://vod.streaming.a2d.tv/promotions/trailers/65ddb610cf302b002a96d95c_PLAY_M
     </vmap:AdSource>
     <vmap:TrackingEvents>
       <vmap:Tracking event="breakStart"><![CDATA[
- http://tv4-prism.eyevinn-test-adserver.auto.prod.osaas.io/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=midroll.ad-3&progress=vmap 
+ http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=midroll.ad-3&progress=vmap 
       ]]></vmap:Tracking>
     </vmap:TrackingEvents>
   </vmap:AdBreak>

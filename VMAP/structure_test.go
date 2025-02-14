@@ -9,7 +9,7 @@ import (
 	"github.com/matryer/is"
 )
 
-func TestMarshalVMAP(t *testing.T) {
+func TestUnmarshalVMAP(t *testing.T) {
 	is := is.New(t)
 	f, err := os.Open("sample-vmap/testVmap.xml")
 	is.NoErr(err)
@@ -20,4 +20,26 @@ func TestMarshalVMAP(t *testing.T) {
 	is.NoErr(err)
 	err = xml.Unmarshal(xmlBytes, &vmap)
 	is.NoErr(err)
+
+	is.Equal(len(vmap.AdBreaks), 3)
+	firstBreak := vmap.AdBreaks[0]
+	is.Equal(firstBreak.Id, "midroll.ad-1")
+	is.Equal(firstBreak.BreakType, "linear")
+	is.Equal(firstBreak.TimeOffset, "00:00:00")
+	is.True(firstBreak.AdSource.VASTData.VAST != nil)
+	is.Equal(len(*firstBreak.TrackingEvents), 1)
+
+	secondBreak := vmap.AdBreaks[1]
+	is.Equal(secondBreak.Id, "midroll.ad-2")
+	is.Equal(secondBreak.BreakType, "linear")
+	is.Equal(secondBreak.TimeOffset, "00:05:00")
+	is.True(firstBreak.AdSource.VASTData.VAST != nil)
+	is.Equal(len(*secondBreak.TrackingEvents), 1)
+
+	thirdBreak := vmap.AdBreaks[2]
+	is.Equal(thirdBreak.Id, "midroll.ad-3")
+	is.Equal(thirdBreak.BreakType, "linear")
+	is.Equal(thirdBreak.TimeOffset, "00:07:00")
+	is.True(thirdBreak.AdSource.VASTData.VAST != nil)
+	is.Equal(len(*thirdBreak.TrackingEvents), 1)
 }
