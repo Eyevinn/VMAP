@@ -90,4 +90,5 @@ type MediaFile struct {
 	Height    int    `xml:"height,attr"`
 	Delivery  string `xml:"delivery,attr"`
 	MediaType string `xml:"type,attr"`
+	Codec     string `xml:"codec,attr"`
 }

@@ -72,4 +72,12 @@ func TestUnmarshalVast(t *testing.T) {
 	is.Equal(len(firstCreative.Linear.TrackingEvents), 5)
 	is.Equal(firstCreative.Linear.Duration, "00:00:10")
 	is.Equal(len(firstCreative.Linear.MediaFiles), 1)
+
+	mediaFile := firstCreative.Linear.MediaFiles[0]
+	is.Equal(mediaFile.Width, 718)
+	is.Equal(mediaFile.Height, 404)
+	is.Equal(mediaFile.MediaType, "video/mp4")
+	is.Equal(mediaFile.Delivery, "progressive")
+	is.Equal(mediaFile.Bitrate, 1300)
+	is.Equal(mediaFile.Codec, "H.264")
 }
