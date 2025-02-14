@@ -43,3 +43,33 @@ func TestUnmarshalVMAP(t *testing.T) {
 	is.True(thirdBreak.AdSource.VASTData.VAST != nil)
 	is.Equal(len(*thirdBreak.TrackingEvents), 1)
 }
+
+func TestUnmarshalVast(t *testing.T) {
+	is := is.New(t)
+	f, err := os.Open("sample-vmap/testVast.xml")
+	is.NoErr(err)
+	defer f.Close()
+
+	var vast VAST
+	xmlBytes, err := io.ReadAll(f)
+	is.NoErr(err)
+	err = xml.Unmarshal(xmlBytes, &vast)
+	is.NoErr(err)
+
+	is.Equal(len(vast.Ad), 2)
+	firstAd := vast.Ad[0]
+	is.Equal(firstAd.Id, "POD_AD-ID_001")
+	firstAdInLine := firstAd.InLine
+	is.Equal(firstAdInLine.AdSystem, "Test Adserver")
+	is.Equal(firstAdInLine.AdTitle, "Ad That Test-Adserver Wants Player To See #1")
+	firstAdImpression := firstAdInLine.Impression
+	is.Equal(firstAdImpression.Id, "IMPRESSION-ID_001")
+	firstAdCreatives := firstAdInLine.Creatives
+	is.Equal(len(firstAdCreatives), 1)
+	firstCreative := firstAdCreatives[0]
+	is.Equal(firstCreative.Id, "CRETIVE-ID_001")
+	is.Equal(firstCreative.AdId, "alvedon-10s")
+	is.Equal(len(firstCreative.Linear.TrackingEvents), 5)
+	is.Equal(firstCreative.Linear.Duration, "00:00:10")
+	is.Equal(len(firstCreative.Linear.MediaFiles), 1)
+}

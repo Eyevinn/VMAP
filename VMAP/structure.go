@@ -11,18 +11,18 @@ type VMAP struct {
 }
 
 type AdBreak struct {
-	AdSource       *AdSource   `xml:"AdSource"`
-	TrackingEvents *[]Tracking `xml:"TrackingEvents"`
-	Id             string      `xml:"breakId,attr"`
-	BreakType      string      `xml:"breakType,attr"`
-	TimeOffset     string      `xml:"timeOffset,attr"`
+	AdSource       *AdSource        `xml:"AdSource"`
+	TrackingEvents *[]TrackingEvent `xml:"TrackingEvents>Tracking"`
+	Id             string           `xml:"breakId,attr"`
+	BreakType      string           `xml:"breakType,attr"`
+	TimeOffset     string           `xml:"timeOffset,attr"`
 }
 
 type AdSource struct {
 	VASTData *VASTData `xml:"VASTAdData"`
 }
 
-type Tracking struct {
+type TrackingEvent struct {
 	Event string `xml:"event,attr"`
 	Text  string `xml:",chardata"`
 }
@@ -51,7 +51,7 @@ type InLine struct {
 	AdSystem   string      `xml:"AdSystem"`
 	AdTitle    string      `xml:"AdTitle"`
 	Impression *Impression `xml:"Impression"`
-	Creatives  []Creative  `xml:"Creatives"`
+	Creatives  []Creative  `xml:"Creatives>Creative"`
 }
 
 type Impression struct {
@@ -61,6 +61,7 @@ type Impression struct {
 
 type Creative struct {
 	Id            string         `xml:"id,attr"`
+	AdId          string         `xml:"adId,attr"`
 	UniversalAdId *UniversalAdId `xml:"UniversalAdId"`
 	Linear        *Linear        `xml:"Linear"`
 }
@@ -68,8 +69,9 @@ type Creative struct {
 type UniversalAdId struct{}
 
 type Linear struct {
-	Duration       string     `xml:"Duration"` // TODO: Make into duration object
-	TrackingEvents []Tracking `xml:"TrackingEvents"`
+	Duration       string          `xml:"Duration"` // TODO: Make into duration object
+	TrackingEvents []TrackingEvent `xml:"TrackingEvents>Tracking"`
+	MediaFiles     []MediaFile     `xml:"MediaFiles>MediaFile"`
 }
 
 type VideoClicks struct {
@@ -79,11 +81,6 @@ type VideoClicks struct {
 type ClickThrough struct {
 	Id   string `xml:"id,attr"`
 	Text string `xml:",chardata"`
-}
-
-type MediaFiles struct {
-	Text      string      `xml:",chardata"`
-	MediaFile []MediaFile `xml:"MediaFile"`
 }
 
 type MediaFile struct {
