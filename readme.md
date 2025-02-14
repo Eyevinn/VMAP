@@ -1,23 +1,27 @@
-# {{Name}}
+# VMAP
 
-<!--
+A small library for marshaling and unmarshaling VMAP and VAST.
+
 
 ## Requirements
-Add any external project dependencies such as node.js version etc here
+Go version 1.22 or higher
 
 ## Installation / Usage
 
-Add clear instructions on how to use the project here
+This is a library meant to be downloaded and installed like other Go code. 
+
+To enable it in your Go project, run 
+
+```go get github.com/Eyevinn/VMAP```
+
+To use the library, add 
+```import github.com/Eyevinn/VMAP```
 
 ## Development
 
 Add clear instructions on how to start development of the project here
 
--->
 
-### Contributing
-
-See [CONTRIBUTING](CONTRIBUTING.md)
 
 # Support
 
