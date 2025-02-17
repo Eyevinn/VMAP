@@ -1,5 +1,8 @@
 # VMAP
-
+![Test](https://github.com/Eyevinn/VMAP/workflows/Go/badge.svg)
+![golangci-lint](https://github.com/Eyevinn/VMAP/workflows/golangci-lint/badge.svg?branch=main)
+[![Go Report Card](https://goreportcard.com/badge/github.com/Eyevinn/VMAP)](https://goreportcard.com/report/github.com/Eyevinn/VMAP)
+[![license](https://img.shields.io/github/license/Eyevinn/VMAP.svg)](https://github.com/Eyevinn/VMAP/blob/main/LICENSE)
 A small library for marshaling and unmarshaling VMAP and VAST.
 
 
