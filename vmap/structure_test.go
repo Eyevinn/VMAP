@@ -63,7 +63,7 @@ func TestUnmarshalVast(t *testing.T) {
 	is.Equal(firstAdInLine.AdSystem, "Test Adserver")
 	is.Equal(firstAdInLine.AdTitle, "Ad That Test-Adserver Wants Player To See #1")
 	firstAdImpression := firstAdInLine.Impression
-	is.Equal(firstAdImpression.Id, "IMPRESSION-ID_001")
+	is.Equal(len(firstAdImpression), 1)
 	firstAdCreatives := firstAdInLine.Creatives
 	is.Equal(len(firstAdCreatives), 1)
 	firstCreative := firstAdCreatives[0]
@@ -72,6 +72,9 @@ func TestUnmarshalVast(t *testing.T) {
 	is.Equal(len(firstCreative.Linear.TrackingEvents), 5)
 	is.Equal(firstCreative.Linear.Duration, "00:00:10")
 	is.Equal(len(firstCreative.Linear.MediaFiles), 1)
+	is.Equal(len(firstCreative.Linear.ClickThroughs), 1)
+	is.Equal(len(firstCreative.Linear.ClickTracking), 0)
+	is.Equal(len(firstCreative.Linear.CustomClick), 0)
 
 	mediaFile := firstCreative.Linear.MediaFiles[0]
 	is.Equal(mediaFile.Width, 718)

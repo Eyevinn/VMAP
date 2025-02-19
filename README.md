@@ -12,13 +12,13 @@ Go version 1.22 or higher
 
 ## Installation / Usage
 
-This is a library meant to be downloaded and installed like other Go code. 
+This is a library meant to be downloaded and installed like other Go code.
 
-To enable it in your Go project, run 
+To enable it in your Go project, run
 
 ```go get github.com/Eyevinn/VMAP```
 
-To use the library, add 
+To use the library, add
 ```import github.com/Eyevinn/VMAP```
 
 ## Development

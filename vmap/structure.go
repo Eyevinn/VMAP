@@ -48,10 +48,10 @@ type Ad struct {
 type AdTagURI struct{}
 
 type InLine struct {
-	AdSystem   string      `xml:"AdSystem"`
-	AdTitle    string      `xml:"AdTitle"`
-	Impression *Impression `xml:"Impression"`
-	Creatives  []Creative  `xml:"Creatives>Creative"`
+	AdSystem   string       `xml:"AdSystem"`
+	AdTitle    string       `xml:"AdTitle"`
+	Impression []Impression `xml:"Impression"`
+	Creatives  []Creative   `xml:"Creatives>Creative"`
 }
 
 type Impression struct {
@@ -72,13 +72,22 @@ type Linear struct {
 	Duration       string          `xml:"Duration"` // TODO: Make into duration object
 	TrackingEvents []TrackingEvent `xml:"TrackingEvents>Tracking"`
 	MediaFiles     []MediaFile     `xml:"MediaFiles>MediaFile"`
-}
-
-type VideoClicks struct {
-	ClickThrough []ClickThrough `xml:"ClickThrough"`
+	ClickThroughs  []ClickThrough  `xml:"VideoClicks>ClickThrough"`
+	ClickTracking  []ClickTracking `xml:"VideoClicks>ClickTracking"`
+	CustomClick    []CustomClick   `xml:"VideoClicks>CustomClick"`
 }
 
 type ClickThrough struct {
+	Id   string `xml:"id,attr"`
+	Text string `xml:",chardata"`
+}
+
+type ClickTracking struct {
+	Id   string `xml:"id,attr"`
+	Text string `xml:",chardata"`
+}
+
+type CustomClick struct {
 	Id   string `xml:"id,attr"`
 	Text string `xml:",chardata"`
 }
