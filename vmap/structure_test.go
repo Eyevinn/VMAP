@@ -5,6 +5,7 @@ import (
 	"io"
 	"os"
 	"testing"
+	"time"
 
 	"github.com/matryer/is"
 )
@@ -25,21 +26,22 @@ func TestUnmarshalVMAP(t *testing.T) {
 	firstBreak := vmap.AdBreaks[0]
 	is.Equal(firstBreak.Id, "midroll.ad-1")
 	is.Equal(firstBreak.BreakType, "linear")
-	is.Equal(firstBreak.TimeOffset, "00:00:00")
+	is.True(firstBreak.TimeOffset.Duration != nil)
+	is.Equal(*firstBreak.TimeOffset.Duration, Duration{})
 	is.True(firstBreak.AdSource.VASTData.VAST != nil)
 	is.Equal(len(*firstBreak.TrackingEvents), 1)
 
 	secondBreak := vmap.AdBreaks[1]
 	is.Equal(secondBreak.Id, "midroll.ad-2")
 	is.Equal(secondBreak.BreakType, "linear")
-	is.Equal(secondBreak.TimeOffset, "00:05:00")
+	is.Equal(*secondBreak.TimeOffset.Duration, Duration{5 * time.Minute})
 	is.True(firstBreak.AdSource.VASTData.VAST != nil)
 	is.Equal(len(*secondBreak.TrackingEvents), 1)
 
 	thirdBreak := vmap.AdBreaks[2]
 	is.Equal(thirdBreak.Id, "midroll.ad-3")
 	is.Equal(thirdBreak.BreakType, "linear")
-	is.Equal(thirdBreak.TimeOffset, "00:07:00")
+	is.Equal(*thirdBreak.TimeOffset.Duration, Duration{7 * time.Minute})
 	is.True(thirdBreak.AdSource.VASTData.VAST != nil)
 	is.Equal(len(*thirdBreak.TrackingEvents), 1)
 }
@@ -70,7 +72,7 @@ func TestUnmarshalVast(t *testing.T) {
 	is.Equal(firstCreative.Id, "CRETIVE-ID_001")
 	is.Equal(firstCreative.AdId, "alvedon-10s")
 	is.Equal(len(firstCreative.Linear.TrackingEvents), 5)
-	is.Equal(firstCreative.Linear.Duration, "00:00:10")
+	is.Equal(firstCreative.Linear.Duration, Duration{10 * time.Second})
 	is.Equal(len(firstCreative.Linear.MediaFiles), 1)
 	is.Equal(len(firstCreative.Linear.ClickThroughs), 1)
 	is.Equal(len(firstCreative.Linear.ClickTracking), 0)
@@ -83,4 +85,24 @@ func TestUnmarshalVast(t *testing.T) {
 	is.Equal(mediaFile.Delivery, "progressive")
 	is.Equal(mediaFile.Bitrate, 1300)
 	is.Equal(mediaFile.Codec, "H.264")
+}
+
+func TestUnmarshalDuration(t *testing.T) {
+	is := is.New(t)
+	d := Duration{}
+	err := d.UnmarshalText([]byte("00:00:10"))
+
+	is.NoErr(err)
+	is.Equal(d.Duration, 10*time.Second)
+	err = d.UnmarshalText([]byte("00:01:00"))
+	is.Equal(d.Duration, 1*time.Minute)
+	is.NoErr(err)
+
+	err = d.UnmarshalText([]byte("00:01:00.300"))
+	is.NoErr(err)
+	is.Equal(d.Duration, 1*time.Minute+300*time.Millisecond)
+
+	err = d.UnmarshalText([]byte("04:01:12.345"))
+	is.NoErr(err)
+	is.Equal(d.Duration, 4*time.Hour+1*time.Minute+12*time.Second+345*time.Millisecond)
 }
