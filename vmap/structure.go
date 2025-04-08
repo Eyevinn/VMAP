@@ -9,19 +9,19 @@ import (
 )
 
 type VMAP struct {
-	XMLName  xml.Name  `xml:"VMAP"`
-	Text     string    `xml:",chardata"`
-	Vmap     string    `xml:"vmap,attr"`
-	Version  string    `xml:"version,attr"`
-	AdBreaks []AdBreak `xml:"AdBreak"`
+	XMLName  xml.Name  `xml:"VMAP" json:"xmlName"`
+	Text     string    `xml:",chardata" json:"text"`
+	Vmap     string    `xml:"vmap,attr" json:"vmap"`
+	Version  string    `xml:"version,attr" json:"version"`
+	AdBreaks []AdBreak `xml:"AdBreak" json:"adBreaks"`
 }
 
 type AdBreak struct {
-	AdSource       *AdSource        `xml:"AdSource"`
-	TrackingEvents *[]TrackingEvent `xml:"TrackingEvents>Tracking"`
-	Id             string           `xml:"breakId,attr"`
-	BreakType      string           `xml:"breakType,attr"`
-	TimeOffset     TimeOffset       `xml:"timeOffset,attr"`
+	AdSource       *AdSource        `xml:"AdSource" json:"adSource"`
+	TrackingEvents *[]TrackingEvent `xml:"TrackingEvents>Tracking" json:"trackingEvents"`
+	Id             string           `xml:"breakId,attr" json:"id"`
+	BreakType      string           `xml:"breakType,attr" json:"breakType"`
+	TimeOffset     TimeOffset       `xml:"timeOffset,attr" json:"timeOffset"`
 }
 
 type AdSource struct {
@@ -29,83 +29,83 @@ type AdSource struct {
 }
 
 type TrackingEvent struct {
-	Event string `xml:"event,attr"`
-	Text  string `xml:",chardata"`
+	Event string `xml:"event,attr" json:"event"`
+	Text  string `xml:",chardata" json:"text"`
 }
 
 type VASTData struct {
-	VAST *VAST `xml:"VAST"`
+	VAST *VAST `xml:"VAST" json:"vast"`
 }
 
 type VAST struct {
-	Text                      string `xml:",chardata"`
-	Xsi                       string `xml:"xsi,attr"`
-	NoNamespaceSchemaLocation string `xml:"noNamespaceSchemaLocation,attr"`
-	Version                   string `xml:"version,attr"`
-	Ad                        []Ad   `xml:"Ad"`
+	Text                      string `xml:",chardata" json:"text"`
+	Xsi                       string `xml:"xsi,attr" json:"xsi"`
+	NoNamespaceSchemaLocation string `xml:"noNamespaceSchemaLocation,attr" json:"noNamespaceSchemaLocation"`
+	Version                   string `xml:"version,attr" json:"version"`
+	Ad                        []Ad   `xml:"Ad" json:"ad"`
 }
 
 type Ad struct {
-	Id       string  `xml:"id,attr"`
-	Sequence int     `xml:"sequence,attr"`
-	InLine   *InLine `xml:"InLine"`
+	Id       string  `xml:"id,attr" json:"id"`
+	Sequence int     `xml:"sequence,attr" json:"sequence"`
+	InLine   *InLine `xml:"InLine" json:"inLine"`
 }
 
 type AdTagURI struct{}
 
 type InLine struct {
-	AdSystem   string       `xml:"AdSystem"`
-	AdTitle    string       `xml:"AdTitle"`
-	Impression []Impression `xml:"Impression"`
-	Creatives  []Creative   `xml:"Creatives>Creative"`
+	AdSystem   string       `xml:"AdSystem" json:"adSystem"`
+	AdTitle    string       `xml:"AdTitle" json:"adTitle"`
+	Impression []Impression `xml:"Impression" json:"impression"`
+	Creatives  []Creative   `xml:"Creatives>Creative" json:"creatives"`
 }
 
 type Impression struct {
-	Id   string `xml:"id,attr"`
-	Text string `xml:",chardata"`
+	Id   string `xml:"id,attr" json:"id"`
+	Text string `xml:",chardata" json:"text"`
 }
 
 type Creative struct {
-	Id            string         `xml:"id,attr"`
-	AdId          string         `xml:"adId,attr"`
-	UniversalAdId *UniversalAdId `xml:"UniversalAdId"`
-	Linear        *Linear        `xml:"Linear"`
+	Id            string         `xml:"id,attr" json:"id"`
+	AdId          string         `xml:"adId,attr" json:"adId"`
+	UniversalAdId *UniversalAdId `xml:"UniversalAdId" json:"universalAdId"`
+	Linear        *Linear        `xml:"Linear" json:"linear"`
 }
 
 type UniversalAdId struct{}
 
 type Linear struct {
-	Duration       Duration        `xml:"Duration"` // TODO: Make into duration object
-	TrackingEvents []TrackingEvent `xml:"TrackingEvents>Tracking"`
-	MediaFiles     []MediaFile     `xml:"MediaFiles>MediaFile"`
-	ClickThroughs  []ClickThrough  `xml:"VideoClicks>ClickThrough"`
-	ClickTracking  []ClickTracking `xml:"VideoClicks>ClickTracking"`
-	CustomClick    []CustomClick   `xml:"VideoClicks>CustomClick"`
+	Duration       Duration        `xml:"Duration" json:"duration"`
+	TrackingEvents []TrackingEvent `xml:"TrackingEvents>Tracking" json:"trackingEvents"`
+	MediaFiles     []MediaFile     `xml:"MediaFiles>MediaFile" json:"mediaFiles"`
+	ClickThroughs  []ClickThrough  `xml:"VideoClicks>ClickThrough" json:"clickThroughs"`
+	ClickTracking  []ClickTracking `xml:"VideoClicks>ClickTracking" json:"clickTracking"`
+	CustomClick    []CustomClick   `xml:"VideoClicks>CustomClick" json:"customClick"`
 }
 
 type ClickThrough struct {
-	Id   string `xml:"id,attr"`
-	Text string `xml:",chardata"`
+	Id   string `xml:"id,attr" json:"id"`
+	Text string `xml:",chardata" json:"text"`
 }
 
 type ClickTracking struct {
-	Id   string `xml:"id,attr"`
-	Text string `xml:",chardata"`
+	Id   string `xml:"id,attr" json:"id"`
+	Text string `xml:",chardata" json:"text"`
 }
 
 type CustomClick struct {
-	Id   string `xml:"id,attr"`
-	Text string `xml:",chardata"`
+	Id   string `xml:"id,attr" json:"id"`
+	Text string `xml:",chardata" json:"text"`
 }
 
 type MediaFile struct {
-	Text      string `xml:",chardata"`
-	Bitrate   int    `xml:"bitrate,attr"`
-	Width     int    `xml:"width,attr"`
-	Height    int    `xml:"height,attr"`
-	Delivery  string `xml:"delivery,attr"`
-	MediaType string `xml:"type,attr"`
-	Codec     string `xml:"codec,attr"`
+	Text      string `xml:",chardata" json:"text"`
+	Bitrate   int    `xml:"bitrate,attr" json:"bitrate"`
+	Width     int    `xml:"width,attr" json:"width"`
+	Height    int    `xml:"height,attr" json:"height"`
+	Delivery  string `xml:"delivery,attr" json:"delivery"`
+	MediaType string `xml:"type,attr" json:"mediaType"`
+	Codec     string `xml:"codec,attr" json:"codec"`
 }
 
 type Duration struct{ time.Duration }
@@ -146,6 +146,23 @@ func (d *Duration) UnmarshalText(data []byte) error {
 	}
 	*d = Duration{dur}
 	return nil
+}
+
+func (d Duration) MarshalText() ([]byte, error) {
+	if d.Duration == 0 {
+		return []byte(""), nil
+	}
+	hours := int(d.Duration.Hours())
+	minutes := int(d.Duration.Minutes()) % 60
+	seconds := int(d.Duration.Seconds()) % 60
+	milliseconds := int(d.Duration.Milliseconds()) % 1000
+
+	var sb strings.Builder
+	sb.WriteString(fmt.Sprintf("%02d:%02d:%02d", hours, minutes, seconds))
+	if milliseconds > 0 {
+		sb.WriteString(fmt.Sprintf(".%03d", milliseconds))
+	}
+	return []byte(sb.String()), nil
 }
 
 // TimeOffset represents the time offset for an ad break in the VMAP document.
@@ -193,4 +210,17 @@ func (to *TimeOffset) UnmarshalText(data []byte) error {
 	var d Duration
 	to.Duration = &d
 	return to.Duration.UnmarshalText(data)
+}
+
+func (to TimeOffset) MarshalText() ([]byte, error) {
+	if to.Duration != nil {
+		return to.Duration.MarshalText()
+	}
+	if to.Position != 0 {
+		return []byte(fmt.Sprintf("#%d", to.Position)), nil
+	}
+	if to.Percent != 0 {
+		return []byte(fmt.Sprintf("%f%%", to.Percent*100)), nil
+	}
+	return []byte(""), nil
 }

@@ -1,6 +1,7 @@
 package vmap
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"io"
 	"os"
@@ -105,4 +106,25 @@ func TestUnmarshalDuration(t *testing.T) {
 	err = d.UnmarshalText([]byte("04:01:12.345"))
 	is.NoErr(err)
 	is.Equal(d.Duration, 4*time.Hour+1*time.Minute+12*time.Second+345*time.Millisecond)
+}
+
+func TestMarshalJson(t *testing.T) {
+	is := is.New(t)
+	f, err := os.Open("sample-vmap/testVmap.xml")
+	is.NoErr(err)
+	defer f.Close()
+
+	var vmap VMAP
+	xmlBytes, err := io.ReadAll(f)
+	is.NoErr(err)
+	err = xml.Unmarshal(xmlBytes, &vmap)
+	is.NoErr(err)
+	jsonBytes, err := json.Marshal(vmap)
+	is.NoErr(err)
+	is.True(json.Valid(jsonBytes))
+
+	var vmap2 VMAP
+	err = json.Unmarshal(jsonBytes, &vmap2)
+	is.NoErr(err)
+	is.Equal(vmap, vmap2)
 }
