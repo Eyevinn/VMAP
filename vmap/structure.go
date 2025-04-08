@@ -150,7 +150,7 @@ func (d *Duration) UnmarshalText(data []byte) error {
 
 func (d Duration) MarshalText() ([]byte, error) {
 	if d.Duration == 0 {
-		return []byte(""), nil
+		return []byte("00:00:00"), nil
 	}
 	hours := int(d.Duration.Hours())
 	minutes := int(d.Duration.Minutes()) % 60
