@@ -27,8 +27,8 @@ func TestUnmarshalVMAP(t *testing.T) {
 	firstBreak := vmap.AdBreaks[0]
 	is.Equal(firstBreak.Id, "midroll.ad-1")
 	is.Equal(firstBreak.BreakType, "linear")
-	is.True(firstBreak.TimeOffset.Duration != nil)
-	is.Equal(*firstBreak.TimeOffset.Duration, Duration{})
+	is.True(firstBreak.TimeOffset.Duration == nil)
+	is.Equal(firstBreak.TimeOffset.Position, OffsetStart)
 	is.True(firstBreak.AdSource.VASTData.VAST != nil)
 	is.Equal(len(*firstBreak.TrackingEvents), 1)
 

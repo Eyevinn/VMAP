@@ -150,7 +150,7 @@ func (d *Duration) UnmarshalText(data []byte) error {
 
 func (d Duration) MarshalText() ([]byte, error) {
 	if d.Duration == 0 {
-		return []byte(""), nil
+		return []byte("00:00:00"), nil
 	}
 	hours := int(d.Duration.Hours())
 	minutes := int(d.Duration.Minutes()) % 60
@@ -187,9 +187,10 @@ func (to *TimeOffset) UnmarshalText(data []byte) error {
 	switch string(data) {
 	case "start":
 		to.Position = OffsetStart
+		return nil
 	case "end":
 		to.Position = OffsetEnd
-
+		return nil
 	}
 	if strings.HasSuffix(string(data), "%") {
 		p, err := strconv.ParseInt(strings.TrimSuffix(string(data), "%"), 10, 8)
