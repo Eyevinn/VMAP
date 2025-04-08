@@ -187,9 +187,10 @@ func (to *TimeOffset) UnmarshalText(data []byte) error {
 	switch string(data) {
 	case "start":
 		to.Position = OffsetStart
+		return nil
 	case "end":
 		to.Position = OffsetEnd
-
+		return nil
 	}
 	if strings.HasSuffix(string(data), "%") {
 		p, err := strconv.ParseInt(strings.TrimSuffix(string(data), "%"), 10, 8)
