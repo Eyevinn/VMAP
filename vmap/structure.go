@@ -30,7 +30,7 @@ type AdSource struct {
 
 type TrackingEvent struct {
 	Event string `xml:"event,attr" json:"event"`
-	Text  string `xml:",chardata" json:"text"`
+	Text  string `xml:",chardata" json:"url"`
 }
 
 type VASTData struct {
@@ -62,7 +62,7 @@ type InLine struct {
 
 type Impression struct {
 	Id   string `xml:"id,attr" json:"id"`
-	Text string `xml:",chardata" json:"text"`
+	Text string `xml:",chardata" json:"url"`
 }
 
 type Creative struct {
@@ -85,17 +85,17 @@ type Linear struct {
 
 type ClickThrough struct {
 	Id   string `xml:"id,attr" json:"id"`
-	Text string `xml:",chardata" json:"text"`
+	Text string `xml:",chardata" json:"url"`
 }
 
 type ClickTracking struct {
 	Id   string `xml:"id,attr" json:"id"`
-	Text string `xml:",chardata" json:"text"`
+	Text string `xml:",chardata" json:"url"`
 }
 
 type CustomClick struct {
 	Id   string `xml:"id,attr" json:"id"`
-	Text string `xml:",chardata" json:"text"`
+	Text string `xml:",chardata" json:"url"`
 }
 
 type MediaFile struct {
