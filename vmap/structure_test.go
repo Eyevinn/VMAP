@@ -75,7 +75,7 @@ func TestUnmarshalVast(t *testing.T) {
 	is.Equal(len(firstCreative.Linear.TrackingEvents), 5)
 	is.Equal(firstCreative.Linear.Duration, Duration{10 * time.Second})
 	is.Equal(len(firstCreative.Linear.MediaFiles), 1)
-	is.Equal(len(firstCreative.Linear.ClickThroughs), 1)
+	is.True(firstCreative.Linear.ClickThrough != nil)
 	is.Equal(len(firstCreative.Linear.ClickTracking), 0)
 	is.Equal(len(firstCreative.Linear.CustomClick), 0)
 

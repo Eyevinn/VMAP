@@ -78,7 +78,7 @@ type Linear struct {
 	Duration       Duration        `xml:"Duration" json:"duration"`
 	TrackingEvents []TrackingEvent `xml:"TrackingEvents>Tracking" json:"trackingEvents"`
 	MediaFiles     []MediaFile     `xml:"MediaFiles>MediaFile" json:"mediaFiles"`
-	ClickThroughs  []ClickThrough  `xml:"VideoClicks>ClickThrough" json:"clickThroughs"`
+	ClickThrough   *ClickThrough   `xml:"VideoClicks>ClickThrough" json:"clickThrough"`
 	ClickTracking  []ClickTracking `xml:"VideoClicks>ClickTracking" json:"clickTracking"`
 	CustomClick    []CustomClick   `xml:"VideoClicks>CustomClick" json:"customClick"`
 }
