@@ -58,6 +58,12 @@ type InLine struct {
 	AdTitle    string       `xml:"AdTitle" json:"adTitle"`
 	Impression []Impression `xml:"Impression" json:"impression"`
 	Creatives  []Creative   `xml:"Creatives>Creative" json:"creatives"`
+	Extensions []Extension  `xml:"Extensions>Extension" json:"extensions"`
+	Error      *Error       `xml:"Error" json:"error"`
+}
+
+type Error struct {
+	Value string `xml:",chardata" json:"value"`
 }
 
 type Impression struct {
@@ -72,7 +78,10 @@ type Creative struct {
 	Linear        *Linear        `xml:"Linear" json:"linear"`
 }
 
-type UniversalAdId struct{}
+type UniversalAdId struct {
+	IdRegistry string `xml:"idRegistry,attr" json:"idRegistry"`
+	Id         string `xml:",chardata" json:"id"`
+}
 
 type Linear struct {
 	Duration       Duration        `xml:"Duration" json:"duration"`
@@ -106,6 +115,19 @@ type MediaFile struct {
 	Delivery  string `xml:"delivery,attr" json:"delivery"`
 	MediaType string `xml:"type,attr" json:"mediaType"`
 	Codec     string `xml:"codec,attr" json:"codec"`
+}
+
+// NOTE: Specifically built for FreeWheel's CreativeParamer extension at the moment.
+type Extension struct {
+	ExtensionType      string              `xml:"type,attr" json:"type"`
+	CreativeParameters []CreativeParameter `xml:"CreativeParameters>CreativeParameter" json:"creativeParameters"`
+}
+
+type CreativeParameter struct {
+	CreativeId            string `xml:"creativeId,attr" json:"creativeId"`
+	Name                  string `xml:"name,attr" json:"name"`
+	Value                 string `xml:",chardata" json:"value"`
+	CreativeParameterType string `xml:"type,attr" json:"creativeParameterType"`
 }
 
 type Duration struct{ time.Duration }

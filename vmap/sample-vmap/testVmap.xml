@@ -385,7 +385,15 @@ https://test-adserver.domain/promotions/trailers/TEST_TRAILER.mp4
                   </Linear>
                 </Creative>
               </Creatives>
-              <Extensions></Extensions>
+              <Extensions>
+                <Extension type='FreeWheel'>
+                  <CreativeParameters>
+                    <CreativeParameter creativeId='132285420' name='AdType' type='Linear'>
+                                              <![CDATA[bumper]]>
+                                          </CreativeParameter>
+                  </CreativeParameters>
+                </Extension>
+              </Extensions>
             </InLine>
           </Ad>
           <Ad id="POD_AD-ID_002" sequence="2">

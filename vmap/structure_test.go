@@ -65,8 +65,25 @@ func TestUnmarshalVast(t *testing.T) {
 	firstAdInLine := firstAd.InLine
 	is.Equal(firstAdInLine.AdSystem, "Test Adserver")
 	is.Equal(firstAdInLine.AdTitle, "Ad That Test-Adserver Wants Player To See #1")
+
+	// Error validation
+	firstAdError := firstAdInLine.Error
+	is.True(firstAdError != nil)
+	is.Equal(firstAdError.Value, "https://error-url/code")
+	// Extension validation
+	firstAdExtensions := firstAdInLine.Extensions
+	is.Equal(len(firstAdExtensions), 1)
+	firstAdExtension := firstAdExtensions[0]
+	is.Equal(firstAdExtension.ExtensionType, "FreeWheel")
+	firstAdExtensionCParams := firstAdExtension.CreativeParameters[0]
+	is.Equal(firstAdExtensionCParams.CreativeId, "132285420")
+	is.Equal(firstAdExtensionCParams.Name, "AdType")
+	is.Equal(firstAdExtensionCParams.Value, "bumper")
+	is.Equal(firstAdExtensionCParams.CreativeParameterType, "Linear")
+	// Impression validation
 	firstAdImpression := firstAdInLine.Impression
 	is.Equal(len(firstAdImpression), 1)
+	// Creatives validation
 	firstAdCreatives := firstAdInLine.Creatives
 	is.Equal(len(firstAdCreatives), 1)
 	firstCreative := firstAdCreatives[0]
@@ -78,7 +95,7 @@ func TestUnmarshalVast(t *testing.T) {
 	is.True(firstCreative.Linear.ClickThrough != nil)
 	is.Equal(len(firstCreative.Linear.ClickTracking), 0)
 	is.Equal(len(firstCreative.Linear.CustomClick), 0)
-
+	// MediaFile validation
 	mediaFile := firstCreative.Linear.MediaFiles[0]
 	is.Equal(mediaFile.Width, 718)
 	is.Equal(mediaFile.Height, 404)
