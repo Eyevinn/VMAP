@@ -69,7 +69,9 @@ func DecodeVmap(input []byte) (VMAP, error) {
 					vmap.Version = string(attr.Value)
 				case "vmap":
 					vmap.Vmap = string(attr.Value)
+					vmap.XMLName.Space = string(attr.Value)
 				}
+				vmap.XMLName.Local = "VMAP"
 			}
 
 		case "AdBreak":
@@ -433,7 +435,6 @@ func (ext *Extension) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokeniz
 				}
 			}
 			par.Value = string(token.Data)
-			par.CreativeParameterType = ext.ExtensionType
 			ext.CreativeParameters = append(ext.CreativeParameters, par)
 		}
 	}

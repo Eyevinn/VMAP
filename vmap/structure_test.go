@@ -5,6 +5,7 @@ import (
 	"encoding/xml"
 	"io"
 	"os"
+	"strings"
 	"testing"
 	"time"
 
@@ -171,4 +172,70 @@ func BenchmarkFastDecode(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		_, _ = DecodeVmap(doc)
 	}
+}
+
+func TestDecodeCompliance(t *testing.T) {
+	is := is.New(t)
+	doc, err := os.ReadFile("sample-vmap/testVmap.xml")
+	is.NoErr(err)
+
+	var vmap1 VMAP
+	err = xml.Unmarshal(doc, &vmap1)
+	is.NoErr(err)
+
+	vmap2, err := DecodeVmap(doc)
+	is.NoErr(err)
+
+	is.Equal(vmap1.Version, vmap2.Version)
+	is.Equal(vmap1.Vmap, vmap2.Vmap)
+	is.Equal(vmap1.XMLName.Local, vmap2.XMLName.Local)
+	is.Equal(vmap1.XMLName.Space, vmap2.XMLName.Space)
+
+	is.Equal(len(vmap1.AdBreaks), len(vmap2.AdBreaks))
+	for i := range vmap1.AdBreaks {
+		adb1 := vmap1.AdBreaks[i]
+		adb2 := vmap2.AdBreaks[i]
+		is.Equal(adb1.BreakType, adb2.BreakType)
+		is.Equal(adb1.Id, adb2.Id)
+		is.Equal(adb1.TimeOffset, adb2.TimeOffset)
+		is.Equal(adb1.TimeOffset.Duration, adb2.TimeOffset.Duration)
+		is.Equal(adb1.TimeOffset.Position, adb2.TimeOffset.Position)
+
+		if adb1.TrackingEvents != nil {
+			te1 := *adb1.TrackingEvents
+			te2 := *adb2.TrackingEvents
+
+			for j := range te1 {
+				abt1 := te1[j]
+				abt2 := te2[j]
+				is.Equal(abt1.Event, abt2.Event)
+				//Decode trims spaces, so not checking whitespace
+				is.Equal(strings.TrimSpace(abt1.Text), strings.TrimSpace(abt2.Text))
+			}
+		}
+
+		is.True(adb1.AdSource.VASTData.VAST != nil)
+		is.True(adb2.AdSource.VASTData.VAST != nil)
+		v1 := *adb1.AdSource.VASTData.VAST
+		v2 := *adb2.AdSource.VASTData.VAST
+		is.Equal(v1.Version, v2.Version)
+		is.Equal(v1.NoNamespaceSchemaLocation, v2.NoNamespaceSchemaLocation)
+		is.Equal(v1.Xsi, v2.Xsi)
+
+		for j := range v1.Ad {
+			ad1 := v1.Ad[j]
+			ad2 := v2.Ad[j]
+			is.Equal(ad1.Id, ad2.Id)
+			is.Equal(ad1.Sequence, ad2.Sequence)
+			if ad1.InLine != nil {
+				is.Equal(ad1.InLine.AdSystem, ad2.InLine.AdSystem)
+				is.Equal(ad1.InLine.AdTitle, ad2.InLine.AdTitle)
+				is.Equal(ad1.InLine.Error, ad2.InLine.Error)
+				if ad1.InLine.Error != nil {
+
+				}
+			}
+		}
+	}
+
 }
