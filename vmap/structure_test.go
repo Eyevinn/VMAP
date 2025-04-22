@@ -20,6 +20,7 @@ func TestUnmarshalVMAP(t *testing.T) {
 	var vmap VMAP
 	xmlBytes, err := io.ReadAll(f)
 	is.NoErr(err)
+
 	err = xml.Unmarshal(xmlBytes, &vmap)
 	is.NoErr(err)
 
@@ -144,4 +145,30 @@ func TestMarshalJson(t *testing.T) {
 	err = json.Unmarshal(jsonBytes, &vmap2)
 	is.NoErr(err)
 	is.Equal(vmap, vmap2)
+}
+
+func BenchmarkUnmarshal(b *testing.B) {
+	doc, err := os.ReadFile("sample-vmap/testVmap.xml")
+	if err != nil {
+		panic(err)
+	}
+
+	var vmap VMAP
+
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		err = xml.Unmarshal(doc, &vmap)
+	}
+}
+
+func BenchmarkFastDecode(b *testing.B) {
+	doc, err := os.ReadFile("sample-vmap/testVmap.xml")
+	if err != nil {
+		panic(err)
+	}
+
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		_, _ = DecodeVmap(doc)
+	}
 }
