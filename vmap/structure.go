@@ -17,11 +17,11 @@ type VMAP struct {
 }
 
 type AdBreak struct {
-	AdSource       *AdSource        `xml:"AdSource" json:"adSource"`
-	TrackingEvents *[]TrackingEvent `xml:"TrackingEvents>Tracking" json:"trackingEvents"`
-	Id             string           `xml:"breakId,attr" json:"id"`
-	BreakType      string           `xml:"breakType,attr" json:"breakType"`
-	TimeOffset     TimeOffset       `xml:"timeOffset,attr" json:"timeOffset"`
+	AdSource       *AdSource       `xml:"AdSource" json:"adSource"`
+	TrackingEvents []TrackingEvent `xml:"TrackingEvents>Tracking" json:"trackingEvents"`
+	Id             string          `xml:"breakId,attr" json:"id"`
+	BreakType      string          `xml:"breakType,attr" json:"breakType"`
+	TimeOffset     TimeOffset      `xml:"timeOffset,attr" json:"timeOffset"`
 }
 
 type AdSource struct {
