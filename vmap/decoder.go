@@ -2,9 +2,11 @@ package vmap
 
 import (
 	"bytes"
+	"encoding/hex"
 	"errors"
 	"io"
 	"strconv"
+	"strings"
 
 	"github.com/muktihari/xmltokenizer"
 )
@@ -262,9 +264,9 @@ func (inline *InLine) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokeniz
 			imp.Text = string(token.Data)
 			inline.Impression = append(inline.Impression, imp)
 		case "AdSystem":
-			inline.AdSystem = string(token.Data)
+			inline.AdSystem = xmlStringToString(token.Data)
 		case "AdTitle":
-			inline.AdTitle = string(token.Data)
+			inline.AdTitle = xmlStringToString(token.Data)
 		case "Extension":
 			var e Extension
 			// Reuse Token object in the sync.Pool since we only use it temporarily.
@@ -318,7 +320,7 @@ func (c *Creative) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokenizer.
 					uaid.IdRegistry = string(attr.Value)
 				}
 			}
-			uaid.Id = string(token.Data)
+			uaid.Id = xmlStringToString(token.Data)
 			c.UniversalAdId = &uaid
 		case "Tracking":
 			if c.Linear == nil {
@@ -438,4 +440,48 @@ func (ext *Extension) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokeniz
 			ext.CreativeParameters = append(ext.CreativeParameters, par)
 		}
 	}
+}
+
+func xmlStringToString(input []byte) string {
+
+	var sb strings.Builder
+	var cb bytes.Buffer
+	sb.Reset()
+	r := bytes.NewReader(input)
+	for {
+		b, err := r.ReadByte()
+		if err != nil {
+			break
+		}
+
+		switch b {
+		//If we see a '&' we have a special character that needs decoding
+		case '&':
+		specialCharLoop:
+			for {
+				c, err := r.ReadByte()
+				if err != nil {
+					break specialCharLoop
+				}
+				switch c {
+				case '#', 'x':
+				case ';':
+					break specialCharLoop
+				default:
+					cb.WriteByte(c)
+				}
+			}
+			sb.WriteString(decodeSpecialCharacterFromHexCode(cb.Bytes()))
+			cb.Reset()
+		//This is just a normal byte, just output it
+		default:
+			sb.WriteByte(b)
+		}
+	}
+	return sb.String()
+}
+
+func decodeSpecialCharacterFromHexCode(input []byte) string {
+	r, _ := hex.DecodeString(string(input))
+	return string(r)
 }
