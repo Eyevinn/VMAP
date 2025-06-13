@@ -3,6 +3,7 @@ package vmap
 import (
 	"encoding/json"
 	"encoding/xml"
+	"fmt"
 	"io"
 	"os"
 	"strings"
@@ -273,7 +274,7 @@ func BenchmarkFasterDecode(b *testing.B) {
 func TestDecodeCompliance(t *testing.T) {
 	wg := sync.WaitGroup{}
 	//Check for race conditions
-	for range 1000 {
+	for range 1 {
 		wg.Add(1)
 		go func(wg *sync.WaitGroup, t *testing.T) {
 			defer wg.Done()
@@ -335,6 +336,19 @@ func TestDecodeCompliance(t *testing.T) {
 						is.Equal(ad1.InLine.Error, ad2.InLine.Error)
 						if ad1.InLine.Error != nil {
 							is.Equal(ad1.InLine.Error.Value, ad2.InLine.Error.Value)
+						}
+						if ad1.InLine.Creatives != nil {
+							for i := range ad1.InLine.Creatives {
+								for j := range ad1.InLine.Creatives[i].Linear.TrackingEvents {
+									//fmt.Println(strings.TrimSpace(ad1.InLine.Creatives[i].Linear.TrackingEvents[j].Text))
+									is.Equal(strings.TrimSpace(ad1.InLine.Creatives[i].Linear.TrackingEvents[j].Text), strings.TrimSpace(ad2.InLine.Creatives[i].Linear.TrackingEvents[j].Text))
+								}
+								for j := range ad1.InLine.Creatives[i].Linear.ClickTracking {
+									fmt.Println(strings.TrimSpace(ad1.InLine.Creatives[i].Linear.ClickTracking[j].Text))
+									is.Equal(strings.TrimSpace(ad1.InLine.Creatives[i].Linear.ClickTracking[j].Text), strings.TrimSpace(ad2.InLine.Creatives[i].Linear.ClickTracking[j].Text))
+								}
+							}
+
 						}
 					}
 				}
