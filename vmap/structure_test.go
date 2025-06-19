@@ -246,29 +246,44 @@ func TestMarshalJson(t *testing.T) {
 }
 
 func BenchmarkUnmarshal(b *testing.B) {
-	doc, err := os.ReadFile("sample-vmap/testVast2.xml")
+	doc, err := os.ReadFile("sample-vmap/testVmap.xml")
 	if err != nil {
 		panic(err)
 	}
 
-	var vast VAST
+	var vmap VMAP
 
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		err = xml.Unmarshal(doc, &vast)
+		err = xml.Unmarshal(doc, &vmap)
 	}
 }
 
 func BenchmarkFasterDecode(b *testing.B) {
-	doc, err := os.ReadFile("sample-vmap/testVast2.xml")
+	doc, err := os.ReadFile("sample-vmap/testVmap.xml")
 	if err != nil {
 		panic(err)
 	}
 
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		_, _ = DecodeVast(doc)
+		_, _ = DecodeVmap(doc)
 	}
+}
+
+func TestSpecialCharacters(t *testing.T) {
+	fmt.Println([]byte("F6"))
+	is := is.New(t)
+	doc, err := os.ReadFile("sample-vmap/testVastSpecialChars.xml")
+	if err != nil {
+		panic(err)
+	}
+	var vastUnmarshal VAST
+	_ = xml.Unmarshal(doc, &vastUnmarshal)
+	vastDecoded, _ := DecodeVast(doc)
+
+	is.Equal(vastUnmarshal.Ad[0].InLine.AdTitle, vastDecoded.Ad[0].InLine.AdTitle)
+	is.Equal(vastDecoded.Ad[0].InLine.AdTitle, "Hej&ö\n<>\"")
 }
 
 func TestDecodeCompliance(t *testing.T) {

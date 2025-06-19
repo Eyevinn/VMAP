@@ -2,11 +2,9 @@ package vmap
 
 import (
 	"bytes"
-	"encoding/hex"
 	"errors"
 	"io"
 	"strconv"
-	"strings"
 
 	"github.com/CarlLindqvist/xmltokenizer"
 )
@@ -149,7 +147,11 @@ func (adBreak *AdBreak) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltoken
 					t.Event = string(attr.Value)
 				}
 			}
-			t.Text = string(token.Data)
+			if token.WasCDATA {
+				t.Text = string(token.Data)
+			} else {
+				t.Text = string(xmlStringToString(token.Data))
+			}
 			*adBreak.TrackingEvents = append(*adBreak.TrackingEvents, t)
 		}
 	}
@@ -261,19 +263,23 @@ func (inline *InLine) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokeniz
 					imp.Id = string(attr.Value)
 				}
 			}
-			imp.Text = string(token.Data)
+			if token.WasCDATA {
+				imp.Text = string(token.Data)
+			} else {
+				imp.Text = string(xmlStringToString(token.Data))
+			}
 			inline.Impression = append(inline.Impression, imp)
 		case "AdSystem":
 			if token.WasCDATA {
 				inline.AdSystem = string(token.Data)
 			} else {
-				inline.AdSystem = xmlStringToString(token.Data)
+				inline.AdSystem = string(xmlStringToString(token.Data))
 			}
 		case "AdTitle":
 			if token.WasCDATA {
 				inline.AdTitle = string(token.Data)
 			} else {
-				inline.AdTitle = xmlStringToString(token.Data)
+				inline.AdTitle = string(xmlStringToString(token.Data))
 			}
 		case "Extension":
 			var e Extension
@@ -288,6 +294,11 @@ func (inline *InLine) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokeniz
 		case "Error":
 			var er Error
 			er.Value = string(token.Data)
+			if token.WasCDATA {
+				er.Value = string(token.Data)
+			} else {
+				er.Value = string(xmlStringToString(token.Data))
+			}
 			inline.Error = &er
 		}
 	}
@@ -331,7 +342,7 @@ func (c *Creative) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokenizer.
 			if token.WasCDATA {
 				uaid.Id = string(token.Data)
 			} else {
-				uaid.Id = xmlStringToString(token.Data)
+				uaid.Id = string(xmlStringToString(token.Data))
 			}
 			c.UniversalAdId = &uaid
 		case "Tracking":
@@ -346,7 +357,11 @@ func (c *Creative) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokenizer.
 					t.Event = string(attr.Value)
 				}
 			}
-			t.Text = string(token.Data)
+			if token.WasCDATA {
+				t.Text = string(token.Data)
+			} else {
+				t.Text = string(xmlStringToString(token.Data))
+			}
 			c.Linear.TrackingEvents = append(c.Linear.TrackingEvents, t)
 		case "ClickThrough":
 			c.Linear.ClickThrough = &ClickThrough{}
@@ -357,7 +372,11 @@ func (c *Creative) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokenizer.
 					c.Linear.ClickThrough.Id = string(attr.Value)
 				}
 			}
-			c.Linear.ClickThrough.Text = string(token.Data)
+			if token.WasCDATA {
+				c.Linear.ClickThrough.Text = string(token.Data)
+			} else {
+				c.Linear.ClickThrough.Text = string(xmlStringToString(token.Data))
+			}
 		case "ClickTracking":
 			if c.Linear == nil {
 				c.Linear = &Linear{}
@@ -370,7 +389,11 @@ func (c *Creative) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokenizer.
 					ct.Id = string(attr.Value)
 				}
 			}
-			ct.Text = string(token.Data)
+			if token.WasCDATA {
+				ct.Text = string(token.Data)
+			} else {
+				ct.Text = string(xmlStringToString(token.Data))
+			}
 			c.Linear.ClickTracking = append(c.Linear.ClickTracking, ct)
 		case "Duration":
 			if c.Linear == nil {
@@ -408,7 +431,11 @@ func (c *Creative) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokenizer.
 					m.Codec = string(attr.Value)
 				}
 			}
-			m.Text = string(token.Data)
+			if token.WasCDATA {
+				m.Text = string(token.Data)
+			} else {
+				m.Text = string(xmlStringToString(token.Data))
+			}
 			c.Linear.MediaFiles = append(c.Linear.MediaFiles, m)
 		}
 	}
@@ -448,52 +475,65 @@ func (ext *Extension) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokeniz
 					par.CreativeParameterType = string(attr.Value)
 				}
 			}
-			par.Value = string(token.Data)
+			if token.WasCDATA {
+				par.Value = string(token.Data)
+			} else {
+				par.Value = string(xmlStringToString(token.Data))
+			}
 			ext.CreativeParameters = append(ext.CreativeParameters, par)
 		}
 	}
 }
 
-func xmlStringToString(input []byte) string {
+func xmlStringToString(input []byte) []byte {
 
-	var sb strings.Builder
-	var cb bytes.Buffer
-	sb.Reset()
-	r := bytes.NewReader(input)
-	for {
-		b, err := r.ReadByte()
-		if err != nil {
-			break
-		}
+	output := make([]byte, 0, len(input))
+	for i := 0; i < len(input); i++ {
+		b := input[i]
 
 		switch b {
 		//If we see a '&' we have a special character that needs decoding
 		case '&':
+			cb := make([]byte, 0, 4)
 		specialCharLoop:
 			for {
-				c, err := r.ReadByte()
-				if err != nil {
-					break specialCharLoop
+				i++
+				if i >= len(input) {
+					break
 				}
+
+				c := input[i]
 				switch c {
 				case '#', 'x':
 				case ';':
 					break specialCharLoop
 				default:
-					cb.WriteByte(c)
+					cb = append(cb, c)
 				}
 			}
-			sb.WriteString(decodeSpecialCharacterFromHexCode(cb.Bytes()))
-			cb.Reset()
+			output = append(output, decodeSpecialCharacterFromHexCode(cb)...)
 		//This is just a normal byte, just output it
 		default:
-			sb.WriteByte(b)
+			output = append(output, b)
 		}
 	}
-	return sb.String()
+	return output
 }
 
-func decodeSpecialCharacterFromHexCode(input []byte) string {
-	r, _ := hex.DecodeString(string(input))
-	return string(r)
+func decodeSpecialCharacterFromHexCode(input []byte) []byte {
+	// Handle &amp; &lt; &gt; &apos; &quot;
+	switch string(input) {
+	case "amp":
+		return []byte("&")
+	case "lt":
+		return []byte("<")
+	case "gt":
+		return []byte(">")
+	case "apos":
+		return []byte("'")
+	case "quot":
+		return []byte("\"")
+	}
+	codePoint, _ := strconv.ParseInt(string(input), 16, 32)
+	return []byte(string(rune(codePoint)))
 }
