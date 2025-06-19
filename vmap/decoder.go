@@ -14,7 +14,7 @@ func DecodeVast(input []byte) (VAST, error) {
 	found := false
 	f := bytes.NewReader([]byte(input))
 
-	tok := xmltokenizer.New(f)
+	tok := xmltokenizer.New(f, xmltokenizer.WithAttrBufferSize(5))
 
 	for {
 		token, err := tok.Token() // Token is only valid until next tok.Token() invocation (short-lived object).
@@ -49,7 +49,7 @@ func DecodeVmap(input []byte) (VMAP, error) {
 
 	f := bytes.NewReader([]byte(input))
 
-	tok := xmltokenizer.New(f)
+	tok := xmltokenizer.New(f, xmltokenizer.WithAttrBufferSize(5))
 
 	for {
 		token, err := tok.Token() // Token is only valid until next tok.Token() invocation (short-lived object).
@@ -494,11 +494,7 @@ func (ext *Extension) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokeniz
 }
 
 func xmlStringToString(input []byte) []byte {
-
-	//output := make([]byte, 0, len(input))
-
 	o := 0
-
 	for i := 0; i < len(input); i++ {
 		b := input[i]
 
@@ -527,12 +523,10 @@ func xmlStringToString(input []byte) []byte {
 				input[o] = ch[l]
 				o++
 			}
-			//output = append(output, decodeSpecialCharacterFromHexCode(cb)...)
 		//This is just a normal byte, just output it
 		default:
 			input[o] = b
 			o++
-			//output = append(output, b)
 		}
 	}
 	return input[0:o]
