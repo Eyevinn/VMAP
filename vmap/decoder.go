@@ -137,7 +137,7 @@ func (adBreak *AdBreak) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltoken
 			adBreak.AdSource.VASTData.VAST = &vast
 		case "Tracking":
 			if adBreak.TrackingEvents == nil {
-				adBreak.TrackingEvents = &[]TrackingEvent{}
+				adBreak.TrackingEvents = []TrackingEvent{}
 			}
 			var t TrackingEvent
 			for i := range token.Attrs {
@@ -152,7 +152,7 @@ func (adBreak *AdBreak) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltoken
 			} else {
 				t.Text = string(xmlStringToString(token.Data))
 			}
-			*adBreak.TrackingEvents = append(*adBreak.TrackingEvents, t)
+			adBreak.TrackingEvents = append(adBreak.TrackingEvents, t)
 		}
 	}
 }

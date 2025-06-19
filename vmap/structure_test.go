@@ -71,21 +71,21 @@ func TestDecodeVmap(t *testing.T) {
 	is.True(firstBreak.TimeOffset.Duration == nil)
 	is.Equal(firstBreak.TimeOffset.Position, OffsetStart)
 	is.True(firstBreak.AdSource.VASTData.VAST != nil)
-	is.Equal(len(*firstBreak.TrackingEvents), 1)
+	is.Equal(len(firstBreak.TrackingEvents), 1)
 
 	secondBreak := vmap.AdBreaks[1]
 	is.Equal(secondBreak.Id, "midroll.ad-2")
 	is.Equal(secondBreak.BreakType, "linear")
 	is.Equal(*secondBreak.TimeOffset.Duration, Duration{5 * time.Minute})
 	is.True(firstBreak.AdSource.VASTData.VAST != nil)
-	is.Equal(len(*secondBreak.TrackingEvents), 1)
+	is.Equal(len(secondBreak.TrackingEvents), 1)
 
 	thirdBreak := vmap.AdBreaks[2]
 	is.Equal(thirdBreak.Id, "midroll.ad-3")
 	is.Equal(thirdBreak.BreakType, "linear")
 	is.Equal(*thirdBreak.TimeOffset.Duration, Duration{7 * time.Minute})
 	is.True(thirdBreak.AdSource.VASTData.VAST != nil)
-	is.Equal(len(*thirdBreak.TrackingEvents), 1)
+	is.Equal(len(thirdBreak.TrackingEvents), 1)
 }
 
 func TestUnmarshalVast(t *testing.T) {
@@ -320,8 +320,8 @@ func TestDecodeCompliance(t *testing.T) {
 				is.Equal(adb1.TimeOffset.Position, adb2.TimeOffset.Position)
 
 				if adb1.TrackingEvents != nil {
-					te1 := *adb1.TrackingEvents
-					te2 := *adb2.TrackingEvents
+					te1 := adb1.TrackingEvents
+					te2 := adb2.TrackingEvents
 
 					for j := range te1 {
 						abt1 := te1[j]
