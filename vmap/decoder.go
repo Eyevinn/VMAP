@@ -519,10 +519,11 @@ func xmlStringToString(input []byte) []byte {
 				}
 			}
 			ch := decodeSpecialCharacterFromHexCode(cb)
-			for l := range ch {
-				input[o] = ch[l]
+			for _, l := range []byte(string(ch)) {
+				input[o] = l
 				o++
 			}
+			input[o] = byte(ch)
 		//This is just a normal byte, just output it
 		default:
 			input[o] = b
@@ -532,20 +533,20 @@ func xmlStringToString(input []byte) []byte {
 	return input[0:o]
 }
 
-func decodeSpecialCharacterFromHexCode(input []byte) []byte {
+func decodeSpecialCharacterFromHexCode(input []byte) rune {
 	// Handle &amp; &lt; &gt; &apos; &quot;
 	switch string(input) {
 	case "amp":
-		return []byte("&")
+		return '&'
 	case "lt":
-		return []byte("<")
+		return '<'
 	case "gt":
-		return []byte(">")
+		return '>'
 	case "apos":
-		return []byte("'")
+		return '\''
 	case "quot":
-		return []byte("\"")
+		return '"'
 	}
 	codePoint, _ := strconv.ParseInt(string(input), 16, 32)
-	return []byte(string(rune(codePoint)))
+	return rune(codePoint)
 }
