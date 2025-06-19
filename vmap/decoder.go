@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/muktihari/xmltokenizer"
+	"github.com/CarlLindqvist/xmltokenizer"
 )
 
 func DecodeVast(input []byte) (VAST, error) {
@@ -264,9 +264,17 @@ func (inline *InLine) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokeniz
 			imp.Text = string(token.Data)
 			inline.Impression = append(inline.Impression, imp)
 		case "AdSystem":
-			inline.AdSystem = xmlStringToString(token.Data)
+			if token.WasCDATA {
+				inline.AdSystem = string(token.Data)
+			} else {
+				inline.AdSystem = xmlStringToString(token.Data)
+			}
 		case "AdTitle":
-			inline.AdTitle = xmlStringToString(token.Data)
+			if token.WasCDATA {
+				inline.AdTitle = string(token.Data)
+			} else {
+				inline.AdTitle = xmlStringToString(token.Data)
+			}
 		case "Extension":
 			var e Extension
 			// Reuse Token object in the sync.Pool since we only use it temporarily.
@@ -320,7 +328,11 @@ func (c *Creative) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokenizer.
 					uaid.IdRegistry = string(attr.Value)
 				}
 			}
-			uaid.Id = xmlStringToString(token.Data)
+			if token.WasCDATA {
+				uaid.Id = string(token.Data)
+			} else {
+				uaid.Id = xmlStringToString(token.Data)
+			}
 			c.UniversalAdId = &uaid
 		case "Tracking":
 			if c.Linear == nil {
