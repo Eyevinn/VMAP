@@ -523,7 +523,6 @@ func xmlStringToString(input []byte) []byte {
 				input[o] = l
 				o++
 			}
-			input[o] = byte(ch)
 		//This is just a normal byte, just output it
 		default:
 			input[o] = b
