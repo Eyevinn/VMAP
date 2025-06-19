@@ -123,6 +123,12 @@ func TestUnmarshalDuration(t *testing.T) {
 	err = d.UnmarshalText([]byte("04:01:12.345"))
 	is.NoErr(err)
 	is.Equal(d.Duration, 4*time.Hour+1*time.Minute+12*time.Second+345*time.Millisecond)
+
+	err = d.UnmarshalText([]byte("01:04:01:12.345"))
+	is.True(err != nil)
+
+	err = d.UnmarshalText([]byte("01:04"))
+	is.True(err != nil)
 }
 
 func TestMarshalJson(t *testing.T) {
