@@ -38,7 +38,7 @@ func DecodeVast(input []byte) (VAST, error) {
 	}
 
 	if !found {
-		return vast, errors.New("No VAST token found in document")
+		return vast, errors.New("no VAST token found in document")
 	}
 	return vast, nil
 }
@@ -88,7 +88,7 @@ func DecodeVmap(input []byte) (VMAP, error) {
 	}
 
 	if !found {
-		return vmap, errors.New("No VMAP token found in document")
+		return vmap, errors.New("no VMAP token found in document")
 	}
 	return vmap, nil
 }
@@ -399,7 +399,15 @@ func (c *Creative) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltokenizer.
 			if c.Linear == nil {
 				c.Linear = &Linear{}
 			}
-			c.Linear.Duration.UnmarshalText(token.Data)
+			if token.WasCDATA {
+				err = c.Linear.Duration.UnmarshalText(token.Data)
+			} else {
+				err = c.Linear.Duration.UnmarshalText(xmlStringToString(token.Data))
+			}
+
+			if err != nil {
+				return err
+			}
 		case "MediaFile":
 			if c.Linear == nil {
 				c.Linear = &Linear{}

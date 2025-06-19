@@ -255,7 +255,7 @@ func BenchmarkUnmarshal(b *testing.B) {
 
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		err = xml.Unmarshal(doc, &vmap)
+		_ = xml.Unmarshal(doc, &vmap)
 	}
 }
 
@@ -272,7 +272,6 @@ func BenchmarkFasterDecode(b *testing.B) {
 }
 
 func TestSpecialCharacters(t *testing.T) {
-	fmt.Println([]byte("F6"))
 	is := is.New(t)
 	doc, err := os.ReadFile("sample-vmap/testVastSpecialChars.xml")
 	if err != nil {
@@ -356,11 +355,17 @@ func TestDecodeCompliance(t *testing.T) {
 							for i := range ad1.InLine.Creatives {
 								for j := range ad1.InLine.Creatives[i].Linear.TrackingEvents {
 									//fmt.Println(strings.TrimSpace(ad1.InLine.Creatives[i].Linear.TrackingEvents[j].Text))
-									is.Equal(strings.TrimSpace(ad1.InLine.Creatives[i].Linear.TrackingEvents[j].Text), strings.TrimSpace(ad2.InLine.Creatives[i].Linear.TrackingEvents[j].Text))
+									is.Equal(
+										strings.TrimSpace(ad1.InLine.Creatives[i].Linear.TrackingEvents[j].Text),
+										strings.TrimSpace(ad2.InLine.Creatives[i].Linear.TrackingEvents[j].Text),
+									)
 								}
 								for j := range ad1.InLine.Creatives[i].Linear.ClickTracking {
 									fmt.Println(strings.TrimSpace(ad1.InLine.Creatives[i].Linear.ClickTracking[j].Text))
-									is.Equal(strings.TrimSpace(ad1.InLine.Creatives[i].Linear.ClickTracking[j].Text), strings.TrimSpace(ad2.InLine.Creatives[i].Linear.ClickTracking[j].Text))
+									is.Equal(
+										strings.TrimSpace(ad1.InLine.Creatives[i].Linear.ClickTracking[j].Text),
+										strings.TrimSpace(ad2.InLine.Creatives[i].Linear.ClickTracking[j].Text),
+									)
 								}
 							}
 
