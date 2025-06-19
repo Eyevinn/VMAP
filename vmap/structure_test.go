@@ -288,7 +288,7 @@ func TestSpecialCharacters(t *testing.T) {
 func TestDecodeCompliance(t *testing.T) {
 	wg := sync.WaitGroup{}
 	//Check for race conditions
-	for range 1 {
+	for range 1000 {
 		wg.Add(1)
 		go func(wg *sync.WaitGroup, t *testing.T) {
 			defer wg.Done()
