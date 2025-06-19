@@ -1,6 +1,7 @@
 package vmap
 
 import (
+	"bytes"
 	"encoding/xml"
 	"fmt"
 	"strconv"
@@ -132,36 +133,31 @@ type CreativeParameter struct {
 
 type Duration struct{ time.Duration }
 
+var formatStrings = [...]string{"h", "m", "s", "ms"}
+
 func (d *Duration) UnmarshalText(data []byte) error {
-	s := string(data)
-	s = strings.TrimSpace(s)
-	if s == "" {
-		*d = Duration{}
-		return nil
+	var sb bytes.Buffer
+	currentPart := 0
+
+	for i := 0; i < len(data); i++ {
+		b := data[i]
+		switch b {
+		case ':', '.':
+			if currentPart == 3 {
+				return fmt.Errorf("invalid duration format: %s", string(data))
+			}
+			sb.WriteString(formatStrings[currentPart])
+			currentPart++
+		case '1', '2', '3', '4', '5', '6', '7', '8', '9', '0':
+			sb.WriteByte(b)
+		}
 	}
-	parts := strings.Split(s, ":")
-	if len(parts) != 3 {
-		return fmt.Errorf("invalid duration format: %s", s)
+	sb.WriteString(formatStrings[currentPart])
+
+	if currentPart < 2 {
+		return fmt.Errorf("invalid duration format: %s", string(data))
 	}
-	// TODO: Figure this part out
-	hours, minutes, seconds := parts[0], parts[1], parts[2]
-	var sb strings.Builder
-	dur := time.Duration(0)
-	sb.WriteString(hours)
-	sb.WriteString("h")
-	sb.WriteString(minutes)
-	sb.WriteString("m")
-	// TODO: Handle seconds with decimal
-	if strings.Contains(seconds, ".") {
-		parts := strings.Split(seconds, ".")
-		sb.WriteString(parts[0])
-		sb.WriteString("s")
-		sb.WriteString(parts[1])
-		sb.WriteString("ms")
-	} else {
-		sb.WriteString(seconds)
-		sb.WriteString("s")
-	}
+
 	dur, err := time.ParseDuration(sb.String())
 	if err != nil {
 		return fmt.Errorf("error parsing duration: %w", err)
