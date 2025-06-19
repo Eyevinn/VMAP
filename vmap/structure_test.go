@@ -354,7 +354,6 @@ func TestDecodeCompliance(t *testing.T) {
 						if ad1.InLine.Creatives != nil {
 							for i := range ad1.InLine.Creatives {
 								for j := range ad1.InLine.Creatives[i].Linear.TrackingEvents {
-									//fmt.Println(strings.TrimSpace(ad1.InLine.Creatives[i].Linear.TrackingEvents[j].Text))
 									is.Equal(
 										strings.TrimSpace(ad1.InLine.Creatives[i].Linear.TrackingEvents[j].Text),
 										strings.TrimSpace(ad2.InLine.Creatives[i].Linear.TrackingEvents[j].Text),
