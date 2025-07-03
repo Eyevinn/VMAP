@@ -27,6 +27,9 @@ func DecodeVast(input []byte) (VAST, error) {
 		switch string(token.Name.Local) {
 		case "VAST":
 			found = true
+			if token.SelfClosing {
+				break
+			}
 			// Reuse Token object in the sync.Pool since we only use it temporarily.
 			se := xmltokenizer.GetToken().Copy(token)
 			err = vast.UnmarshalToken(tok, se)
