@@ -51,6 +51,28 @@ func TestUnmarshalVMAP(t *testing.T) {
 	is.Equal(len(thirdBreak.TrackingEvents), 1)
 }
 
+func TestDecodeEmptyVmap(t *testing.T) {
+	is := is.New(t)
+	doc, err := os.ReadFile("sample-vmap/testVmap2.xml")
+	is.NoErr(err)
+
+	vmap, err := DecodeVmap(doc)
+	is.NoErr(err)
+
+	is.Equal(len(vmap.AdBreaks), 0)
+}
+
+func TestDecodeEmptyVast(t *testing.T) {
+	is := is.New(t)
+	doc, err := os.ReadFile("sample-vmap/testVast3.xml")
+	is.NoErr(err)
+
+	vast, err := DecodeVast(doc)
+	is.NoErr(err)
+
+	is.Equal(len(vast.Ad), 0)
+}
+
 func TestDecodeVmap(t *testing.T) {
 	is := is.New(t)
 	f, err := os.Open("sample-vmap/testVmap.xml")
