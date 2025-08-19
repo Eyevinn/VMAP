@@ -130,6 +130,9 @@ func (adBreak *AdBreak) UnmarshalToken(tok *xmltokenizer.Tokenizer, se *xmltoken
 		switch string(token.Name.Local) {
 		case "VAST":
 			var vast VAST
+			if token.SelfClosing {
+				break
+			}
 			// Reuse Token object in the sync.Pool since we only use it temporarily.
 			se := xmltokenizer.GetToken().Copy(token)
 			err = vast.UnmarshalToken(tok, se)

@@ -1,0 +1,14 @@
+<vmap:VMAP version="1.0" xmlns:vmap="http://www.iab.net/vmap-1.0">
+  <vmap:AdBreak breakId="midroll.ad-1" breakType="linear" timeOffset="start">
+    <vmap:AdSource id="1" allowMultipleAds="true" followRedirects="true">
+      <vmap:VASTAdData>
+      <VAST version="4.1" />
+      </vmap:VASTAdData>
+    </vmap:AdSource>
+    <vmap:TrackingEvents>
+      <vmap:Tracking event="breakStart"><![CDATA[
+ http://test-adserver.domain/api/v1/sessions/331cea0b-f9a0-4ad3-b07c-e552f003316d/tracking?adId=midroll.ad-3&progress=vmap
+      ]]></vmap:Tracking>
+    </vmap:TrackingEvents>
+  </vmap:AdBreak>
+</vmap:VMAP>
