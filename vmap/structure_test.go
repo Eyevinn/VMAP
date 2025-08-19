@@ -62,6 +62,17 @@ func TestDecodeEmptyVmap(t *testing.T) {
 	is.Equal(len(vmap.AdBreaks), 0)
 }
 
+func TestDecodeVmapEmptyVast(t *testing.T) {
+	is := is.New(t)
+	doc, err := os.ReadFile("sample-vmap/testVmapEmptyVast.xml")
+	is.NoErr(err)
+
+	vmap, err := DecodeVmap(doc)
+	is.NoErr(err)
+
+	is.Equal(len(vmap.AdBreaks), 1)
+}
+
 func TestDecodeEmptyVast(t *testing.T) {
 	is := is.New(t)
 	doc, err := os.ReadFile("sample-vmap/testVast3.xml")
