@@ -71,6 +71,7 @@ func TestDecodeVmapEmptyVast(t *testing.T) {
 	is.NoErr(err)
 
 	is.Equal(len(vmap.AdBreaks), 1)
+	is.Equal(len(vmap.AdBreaks[0].AdSource.VASTData.VAST.Ad), 0)
 }
 
 func TestDecodeEmptyVast(t *testing.T) {
